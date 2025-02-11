@@ -1,73 +1,94 @@
 ![image](https://github.com/user-attachments/assets/f5a4ae85-5b7e-41dc-8b10-21a44047d6e7)
 ![Untitled design (3)](https://github.com/user-attachments/assets/e9e08f99-2546-467a-b03e-325ddc8857ea)
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mapbox Integration in React
 
-## Available Scripts
+![Mapbox Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Mapbox_logo_2019.svg/1200px-Mapbox_logo_2019.svg.png)
 
-In the project directory, you can run:
+## 🚀 Project Overview
+This project demonstrates how to seamlessly integrate **Mapbox** into a React application for building dynamic, interactive, and responsive maps. It supports customizable markers, user location tracking, zoom controls, and more, offering a powerful mapping experience.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🎯 Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🗺️ **Interactive Maps:** Zoom, pan, and dynamic map rendering.
+- 📍 **Custom Markers:** Add markers to pinpoint locations on the map.
+- 📡 **User Location Tracking:** Real-time geolocation features.
+- ⚡ **Fast & Responsive:** Smooth performance on all screen sizes.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Installation and Setup
 
-### `npm run build`
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/mapbox-react-app.git
+cd mapbox-react-app
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. Get a Mapbox Access Token
+- Sign up or log in to [Mapbox](https://www.mapbox.com/).
+- Go to **Account Settings** and generate an access token.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4. Set Environment Variables
+Create a `.env` file in the root directory and add your Mapbox token:
 
-### `npm run eject`
+```
+REACT_APP_MAPBOX_TOKEN=your_access_token_here
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 5. Start the Application
+```bash
+npm start
+```
+The app will run at [http://localhost:3000](http://localhost:3000).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🧑‍💻 Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Open the app in your browser.
+2. Interact with the map to zoom, pan, and see markers.
+3. Customize the map style and add features as needed.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🛠️ Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **React** for the front-end framework
+- **Mapbox GL JS** for map rendering
+- **Bootstrap** for responsive design (optional)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🌍 Mapbox Configuration
+To customize the map style or features, explore the [Mapbox Studio](https://studio.mapbox.com/) and apply changes in the code.
 
-### Analyzing the Bundle Size
+Example of adding markers:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```javascript
+import mapboxgl from 'mapbox-gl';
 
-### Making a Progressive Web App
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
+const map = new mapboxgl.Map({
+  container: 'map-container',
+  style: 'mapbox://styles/mapbox/streets-v11',
+  center: [-74.5, 40],
+  zoom: 9
+});
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+new mapboxgl.Marker()
+  .setLngLat([-74.5, 40])
+  .addTo(map);
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🤝 Contributions
+Contributions are welcome! Feel free to fork the repository and submit pull requests.
