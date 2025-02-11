@@ -3,9 +3,6 @@
 
 
 # Mapbox Integration in React
-
-![Mapbox Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Mapbox_logo_2019.svg/1200px-Mapbox_logo_2019.svg.png)
-
 ## 🚀 Project Overview
 This project demonstrates how to seamlessly integrate **Mapbox** into a React application for building dynamic, interactive, and responsive maps. It supports customizable markers, user location tracking, zoom controls, and more, offering a powerful mapping experience.
 
