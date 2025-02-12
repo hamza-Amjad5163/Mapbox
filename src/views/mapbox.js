@@ -3,7 +3,7 @@ import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import uniMarkerUrl from "../assets/uni.gif";
 import resMarkerUrl from "../assets/res.gif";
-// import other from "../assets/other.gif";
+import other from "../assets/other.gif";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Dropdown } from 'react-bootstrap';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
